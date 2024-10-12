@@ -21,6 +21,9 @@ SELECT * From menu_items;
 
 
 
+
+
+
 --UPDATE
 
 UPDATE customers
@@ -37,4 +40,17 @@ WHERE Menuitem_id = 2;
 
 SELECT * From menu_items;
 
+
+
+
 --DELETE
+DELETE from customers
+WHERE Customer_id = 1;
+
+SELECT * From customers;
+
+
+DELETE from menu_items
+WHERE Menuitem_id = 2;
+
+SELECT * From menu_items;
