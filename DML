@@ -14,6 +14,27 @@ SELECT * From restaurants;
 
 INSERT INTO menu_items(Restaurant_id, Name, Cost)
 VALUES
-(1,'Cheese Pizza',15);
+(1,'Cheese Pizza',15),
+(1,'Farmhouse Pizza', 20);
 
 SELECT * From menu_items;
+
+
+
+--UPDATE
+
+UPDATE customers
+SET Address = '456 Elm St, Springfield'
+WHERE Customer_id=1;
+
+
+SELECT * From customers;
+
+
+UPDATE menu_items
+SET Cost = 25
+WHERE Menuitem_id = 2;
+
+SELECT * From menu_items;
+
+--DELETE
