@@ -1,0 +1,34 @@
+-- Create All Tables
+CREATE TABLE customers(
+Customer_id SERIAL primary key,
+Name varchar(50) NOT NULL,
+Address varchar(255) NOT NULL,
+Contactinfo varchar(50) NOT NULL
+);
+
+CREATE TABLE restaurants (
+Restaurant_id SERIAL PRIMARY KEY,
+Name varchar(50) NOT NULL,
+Location varchar(255) NOT NULL
+);
+
+CREATE TABLE menu_items(
+Menuitem_id SERIAL PRIMARY KEY,
+Restaurant_id integer references restaurants(Restaurant_id),
+Name varchar(50) NOT NULL,
+Cost integer NOT NULL check(Cost>0)
+);
+
+CREATE TABLE orders(
+Order_id SERIAL PRIMARY KEY,
+Customer_id integer references customers(Customer_id),
+Date timestamp default current_timestamp,
+Amount integer NOT NULL check(Amount>0)
+);
+
+CREATE TABLE orderdetails(
+Orderdetail_id SERIAL PRIMARY KEY,
+Order_id integer references orders(Order_id),
+Menuitem_id integer references menu_items(Menuitem_id),
+Quantity integer NOT NULL check(Quantity>0)
+);
