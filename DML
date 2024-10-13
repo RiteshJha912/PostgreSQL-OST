@@ -8,14 +8,21 @@ VALUES
 SELECT * From customers;
 
 INSERT INTO restaurants(Name, Location)
-VALUES('LaPinos Pizza','Jharkhand');
+VALUES('LaPinos Pizza','Jharkhand'),
+('Restaurant 2', 'Mumbai');
 
 SELECT * From restaurants;
 
 INSERT INTO menu_items(Restaurant_id, Name, Cost)
 VALUES
 (1,'Cheese Pizza',15),
-(1,'Farmhouse Pizza', 20);
+(1,'Dal Makhani',5),
+(1,'Paneer chilly', 20),
+(1,'BBQ Chicken', 40),
+(1,'Farmhouse Pizza', 20),
+(2,'Burger',5),
+(2,'Chai', 2),
+(2,'Burrito', 19);
 
 SELECT * From menu_items;
 
