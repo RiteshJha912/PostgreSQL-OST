@@ -1,1 +1,18 @@
+-- Aggregate functions 
+
+-- Simple Aggregates
+SELECT sum(Cost) as total_cost
+from menu_items;
+
+SELECT avg(Cost) as avg_cost
+from menu_items;
+
+select count(*) as total_dishes
+from menu_items;
+
+select min(Cost) as min_cost
+from menu_items;
+
+select max(Cost) as max_cost
+from menu_items;
 
