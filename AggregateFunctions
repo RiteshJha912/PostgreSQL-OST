@@ -16,3 +16,26 @@ from menu_items;
 select max(Cost) as max_cost
 from menu_items;
 
+
+-- Aggregate with clauses
+-- ORDER BY
+SELECT Restaurant_id, SUM(Cost) AS total_cost
+FROM menu_items
+GROUP BY Restaurant_id;
+
+-- GROUP BY
+SELECT Restaurant_id, SUM(Cost) AS total_cost
+FROM menu_items
+GROUP BY Restaurant_id
+ORDER BY total_cost DESC;
+
+-- HAVING
+SELECT Restaurant_id, SUM(Cost) AS total_cost
+FROM menu_items
+GROUP BY Restaurant_id
+HAVING SUM(Cost) > 50;
+
+
+-- Like Operator 
+Select * FROM menu_items
+WHERE Name LIKE '%Pizza';
